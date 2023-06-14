@@ -1,0 +1,40 @@
+{% extends "homepage.html" %}
+ {% block content %}
+<h1>All Records </h1>
+<p> Below are all the records currently inside the json flat file.</p>
+<br>
+{% set count = namespace(value=1)%}
+<table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Index</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <!-- <th scope="col">Handle</th> -->
+      </tr>
+    </thead>
+    <tbody>
+    {% for info in data %}
+      <tr>
+        <th scope="row">{{count.value}}</th>
+        <td>{{ info.first_name }}</td>
+        <td>{{ info.last_name }}</td>
+        <td>
+          <div>
+          <form action  ="/view?id={{info.id}}" method = "post">
+            <input type = "submit" class = "btn btn-secondary" value = "View Details"> 
+        </form>
+
+          <form action  ="/delete/{{info.id}}" method = "post">
+            <input type = "submit" class = "btn btn-secondary" value = "Delete">
+        </form>
+        </div>
+        </td>
+        <!-- <td>@mdo</td> -->
+        {% set count.value = count.value + 1 %}
+      </tr>
+      {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

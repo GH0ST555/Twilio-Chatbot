@@ -1,0 +1,45 @@
+{% extends "homepage.html" %}
+{% block content %}
+<style>.form-signin{
+    width: 400px;
+    height: 500px;
+    padding-top:  50px;
+  }</style>
+<center>
+<form class="form-signin" method="post">
+    {{ form.hidden_tag() }}
+    <!-- 2 column grid layout with text inputs for the first and last names -->
+    <div class="row mb-4">
+      <div class="col">
+        <div class="form-outline">
+            <label class="form-label" for="form3Example1">First name</label>
+            {{form.fname(class_="form-control", value =data.first_name)}}
+            <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-outline">
+            <label class="form-label" for="form3Example2">Last name</label>
+            {{form.lname(class_="form-control",value =data.last_name)}}
+        </div>
+      </div>
+    </div>
+
+    <!-- Phone Number input -->
+    <div class="form-outline mb-4">
+        <label class="form-label" for="form3Example4">Phone</label>
+        {{form.pno(class_="form-control",value =data.phone)}}
+    </div>
+  
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+        <label class="form-label" for="form3Example3">Email address</label>
+        {{form.email(class_="form-control",value =data.email)}}
+    </div>
+    
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4">Update Info</button>
+</center> 
+{% endblock %}
