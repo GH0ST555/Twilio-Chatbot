@@ -1,6 +1,5 @@
-HI, This is my application created using flask.
-It reads from a JSON FLAT file.
-It has features such as create, edit , delete
+HI, This is an experiment on Chatbots uisng Twilio SMS feature
+
 
 All the modules required for its run is specified in requirements.txt
 to create the virtual environment - enter pip freeze -r requirements.txt
