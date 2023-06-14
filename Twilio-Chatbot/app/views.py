@@ -48,9 +48,9 @@ class ChatMessage:
 
 def send_sms(message,number):
     # Use Twilio to send an SMS message
-    account_sid = 'AC4c6fdc6900c4f4f80963e7d13f988fdb'
-    auth_token = '034b486b919fd11734d3766942247611'
-    twilio_number = '+447360269493'
+    account_sid = 'add '
+    auth_token = 'add'
+    twilio_number = 'your twilio service number here'
     recipient_number = number
 
     client = Client(account_sid, auth_token)
