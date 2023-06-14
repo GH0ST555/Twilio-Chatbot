@@ -11,8 +11,8 @@ from twilio.twiml.messaging_response import MessagingResponse
 from twilio.rest import Client
 from twilio.base.exceptions import TwilioRestException
 import openai
-openai.api_key = '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'
-client = Client('AC4c6fdc6900c4f4f80963e7d13f988fdb', '034b486b919fd11734d3766942247611')
+openai.api_key = 'add ur key here'
+client = Client('add SID', 'add auth token')
 
 #it is a sample view to test a sample JSON File with flask. as i am not very familiar with JSON i am trying an example
 
